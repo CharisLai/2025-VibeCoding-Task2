@@ -316,6 +316,37 @@
       /* =========================================
    CSS:RWD-START － 手機優先 RWD 媒體查詢
    ========================================= */
+      /* 基本保護：320px 手機螢幕不產生水平捲動 */
+      @media (max-width: 480px) {
+        html,
+        body {
+          max-width: 100%;
+          overflow-x: hidden;
+        }
+        .container {
+          width: 100%;
+          overflow-x: hidden;
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+        img {
+          max-width: 100%;
+          height: auto;
+          display: block;
+        }
+        .section {
+          padding: 56px 0;
+        }
+        .hero-title {
+          font-size: 1.75rem;
+          word-wrap: break-word;
+        }
+        .about-wrap,
+        .hero-wrap {
+          grid-template-columns: 1fr;
+        }
+      }
+
       @media (min-width: 768px) {
         .section {
           padding: 80px 0;
